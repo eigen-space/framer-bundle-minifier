@@ -10,7 +10,9 @@ Minify Framer X exported index.html
 2. Pass your `index.html` content into minify function
 3. Get your minified version of content
 
-### From OS
+### TODO: From OS
+
+https://github.com/eigen-space/framer-bundle-minifier/issues/1/
 
 1. Install `@eigenspace/framer-bundle-minifier` globally: 
       * for yarn:
