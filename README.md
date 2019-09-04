@@ -32,6 +32,9 @@ Minify Framer X exported index.html
 
 * `@types/*` - contains type definitions for specific library.
 * `@eigenspace/eslint-config-codestyle` - project with eslint config files.
+* `@eigenspace/helper-scripts` - common scripts for dev. environment.
 * `eslint` - it checks code for readability, maintainability, and functionality errors.
 * `@eigenspace/codestyle` - includes lint rules, config for typescript.
+* `husky` - used for configure git hooks.
+* `lint-staged` - used for configure linters against staged git files.
 * `typescript` - is a superset of JavaScript that have static type-checking and ECMAScript features.
