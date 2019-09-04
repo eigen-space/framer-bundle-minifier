@@ -8,6 +8,7 @@
         "lint": "yarn lint:code . && yarn lint:markdown",
         "lint:code": "eslint --ext .tsx,.ts",
         "lint:fix": "yarn lint:code --fix",
+        "hooks:pre-push": "yarn lint",
         "hooks:pre-commit": "lint-staged",
         "lint:markdown": "node ./node_modules/@eigenspace/codestyle/scripts/markdown-lint.js",
         "deploy:publish": "node node_modules/@eigenspace/helper-scripts/scripts/ci/publish.js"
