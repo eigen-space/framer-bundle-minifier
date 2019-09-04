@@ -13,13 +13,25 @@ Minify Framer X exported index.html
 ### From OS
 
 1. Install `@eigenspace/framer-bundle-minifier` globally: 
-
-  * for yarn:
-    `yarn global add @eigenspace/framer-bundle-minifier`
-
-  * for npm:
-    `npm install --global @eigenspace/framer-bundle-minifier`
+      * for yarn:
+        `yarn global add @eigenspace/framer-bundle-minifier`
+    
+      * for npm:
+        `npm install --global @eigenspace/framer-bundle-minifier`
    
-2. Call script with your input and output paths:
+2. Call script with your input and output paths: \
    `@eigenspace/framer-bundle-minifier --i=index.html --o=index.min.html`
    
+## Why do we have that dependencies?
+
+* `@eigenspace/argument-parser` - get arguments from user input in terminal.
+* `clean-css` - CSS minifier.
+* `uglify-es` - JavaScript minifier.
+
+## Why do we have that dev dependencies?
+
+* `@types/*` - contains type definitions for specific library.
+* `@eigenspace/eslint-config-codestyle` - project with eslint config files.
+* `eslint` - it checks code for readability, maintainability, and functionality errors.
+* `@eigenspace/codestyle` - includes lint rules, config for typescript.
+* `typescript` - is a superset of JavaScript that have static type-checking and ECMAScript features.

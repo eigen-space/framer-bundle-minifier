@@ -3,7 +3,11 @@
     "license": "MIT",
     "description": "Minify Framer X exported index.html",
     "scripts": {
-        "build": "tsc"
+        "build": "tsc",
+        "lint": "yarn lint:code . && yarn lint:markdown",
+        "lint:code": "eslint --ext .tsx,.ts",
+        "lint:fix": "yarn lint:code --fix",
+        "lint:markdown": "node ./node_modules/@eigenspace/codestyle/scripts/markdown-lint.js"
     },
     "dependencies": {
         "@eigenspace/argument-parser": "1.0.3",
@@ -17,6 +21,6 @@
         "@types/node": "12.7.4",
         "@types/uglify-es": "3.0.0",
         "eslint": "5.16.0",
-        "typescript": "3.6.2"
+        "typescript": "3.5.3"
     }
 }
