@@ -10,6 +10,11 @@ Minify Framer X exported index.html
 2. Pass your `index.html` content into minify function
 3. Get your minified version of content
 
+### From project
+
+Type the following in terminal: \
+`/node_modules/@eigenspace/framer-bundle-minifier/index.js --i=index.html --o=index.min.html`
+
 ### TODO: From OS
 
 https://github.com/eigen-space/framer-bundle-minifier/issues/1/
