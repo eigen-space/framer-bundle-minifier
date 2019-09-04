@@ -8,6 +8,7 @@
         "lint": "yarn lint:code . && yarn lint:markdown",
         "lint:code": "eslint --ext .tsx,.ts",
         "lint:fix": "yarn lint:code --fix",
+        "hooks:pre-commit": "lint-staged",
         "lint:markdown": "node ./node_modules/@eigenspace/codestyle/scripts/markdown-lint.js",
         "deploy:publish": "node node_modules/@eigenspace/helper-scripts/scripts/ci/publish.js"
     },
@@ -15,6 +16,18 @@
         "@eigenspace/argument-parser": "1.0.3",
         "clean-css": "4.2.1",
         "uglify-es": "3.3.9"
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "yarn hooks:pre-push",
+            "pre-commit": "yarn hooks:pre-commit"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "yarn lint:fix",
+            "git add"
+        ]
     },
     "devDependencies": {
         "@eigenspace/codestyle": "1.1.67",
@@ -24,6 +37,8 @@
         "@types/node": "12.7.4",
         "@types/uglify-es": "3.0.0",
         "eslint": "5.16.0",
+        "lint-staged": "8.1.7",
+        "husky": "2.3.0",
         "typescript": "3.5.3"
     }
 }

@@ -35,4 +35,5 @@ Minify Framer X exported index.html
 * `@eigenspace/helper-scripts` - common scripts for dev. environment.
 * `eslint` - it checks code for readability, maintainability, and functionality errors.
 * `@eigenspace/codestyle` - includes lint rules, config for typescript.
+* `husky` - used for configure git hooks.
 * `typescript` - is a superset of JavaScript that have static type-checking and ECMAScript features.
