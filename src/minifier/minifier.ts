@@ -1,6 +1,20 @@
 import * as UglifyJS from 'uglify-es';
 import CleanCss from 'clean-css';
 
+export function minify(str: string): string {
+    const filters = [
+        removeComments,
+        minifyJS,
+        minifyCSS,
+        removeWhitespace
+    ];
+
+    let result = str;
+    filters.forEach(applyFilter => result = applyFilter(result));
+
+    return result;
+}
+
 function minifyJs(str: string): string {
     return UglifyJS.minify(str).code;
 }
@@ -41,20 +55,6 @@ function removeWhitespace(str: string): string {
 
     // Collapse everything to a single line
     result = result.replace(/\s*\n+\s*/g, '');
-
-    return result;
-}
-
-export function minify(str: string): string {
-    const filters = [
-        removeComments,
-        minifyJS,
-        minifyCSS,
-        removeWhitespace
-    ];
-
-    let result = str;
-    filters.forEach(applyFilter => result = applyFilter(result));
 
     return result;
 }
