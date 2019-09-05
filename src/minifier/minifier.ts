@@ -46,15 +46,7 @@ function minifyJS(str: string): string {
 }
 
 function removeWhitespace(str: string): string {
-    let result = str;
-
-    result = result.trim();
-
-    // Double / multi spaces to single
-    result = result.replace(/[^\S\r\n]+/g, ' ');
-
-    // Collapse everything to a single line
-    result = result.replace(/\s*\n+\s*/g, '');
-
-    return result;
+    const withoutSpacesInBorders = str.trim();
+    const withoutMultiSpaces = withoutSpacesInBorders.replace(/[^\S\r\n]+/g, ' ');
+    return withoutMultiSpaces.replace(/\s*\n+\s*/g, '');
 }

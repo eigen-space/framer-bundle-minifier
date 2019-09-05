@@ -13,7 +13,11 @@ Minify Framer X exported index.html
 ### From project
 
 Type the following in terminal: \
-`/node_modules/@eigenspace/framer-bundle-minifier/index.js --i=index.html --o=index.min.html`
+`/node_modules/@eigenspace/framer-bundle-minifier/index.js --from=index.html --to=index.min.html`
+
+Where:
+1. «from» is a required parameter
+2. «to» is optional. By default set as `<from-name>.min.html`.
 
 ### TODO: From OS
 
