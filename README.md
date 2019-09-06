@@ -2,6 +2,17 @@
 
 Minify Framer X exported index.html
 
+# Motivation
+
+Before we've tried using this libraries:
+1. [HTML Minifier](https://www.npmjs.com/package/html-minifier) is freezing with enabled UglifyJS + 
+it brokes styles. Also we can’t configure Clean CSS + UglifyJS.
+
+2. [HTMLNano](https://www.npmjs.com/package/htmlnano) also not works:
+    ```
+    Error: SyntaxError: Unexpected token: operator (<)
+    ``` 
+
 ## How use it?
 
 ### From code
