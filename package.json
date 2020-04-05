@@ -1,7 +1,7 @@
 {
     "name": "@eigenspace/framer-bundle-minifier",
     "license": "MIT",
-    "version": "0.0.499",
+    "version": "0.0.500",
     "description": "Minify Framer X exported index.html",
     "scripts": {
         "build": "tsc && node ./dev/scripts/copy-assets.js",
